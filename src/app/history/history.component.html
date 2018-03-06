@@ -1,0 +1,8 @@
+<div class="container rounded">
+  <p class="history">Past Commands</p>
+  <div class="row rounded" *ngFor="let cmd of historyCommands">
+    <div class="col-xs-12 command">
+      {{cmd}}
+    </div>
+  </div>
+</div>

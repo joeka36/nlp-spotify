@@ -1,0 +1,26 @@
+.history {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+}
+
+.container {  
+  height: 50%;
+  /*border: 5px solid #6fed77;*/
+}
+
+.row {
+  border-bottom: 5px solid #6fed77;
+  /*border-radius: 30%;*/
+  margin-bottom: 1%;
+  background-color: white;
+}
+
+.command {
+  margin: 3% auto;
+  font-size: 1.7rem;
+  color: #aaaaaa;
+  font-weight: 700;
+  text-align: center;
+}

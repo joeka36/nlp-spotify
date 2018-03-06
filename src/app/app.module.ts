@@ -5,13 +5,15 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { RecordingComponent } from './recording/recording.component';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    RecordingComponent
+    RecordingComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
