@@ -5,13 +5,13 @@
 }
 
 .recorder {
-  border-right: 6px solid #aaaaaa;
+  border-right: 6px solid #6fed77;
+  text-align: center;
 }
 
 .fa-microphone {
   margin: 20% auto;
-  padding-left: 10%;
-  font-size: 10rem;
+  font-size: 7rem;
   color: #aaaaaa;
 }
 
@@ -25,11 +25,41 @@
 
 .submit {
   background-color: #6fed77;
+  text-align: center;
 }
 
 .fa-check {
-  font-size: 7rem;
+  font-size: 5rem;
   padding-top: 30%;
-  padding-left: 16%;
   color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .fa-microphone {
+    margin: 10% auto;
+    font-size: 7rem;
+    color: #aaaaaa;
+  }
+
+  .recorder {
+    border-bottom: 6px solid #6fed77;
+    border-right: none;
+    text-align: center;
+  }
+
+  .submit {
+    background-color: #6fed77;
+    text-align: center;
+    height: 170px;
+  }
+
+  .text-display {
+    height: 150px;
+  }
+
+  .fa-check {
+    font-size: 5rem;
+    color: white;
+    padding-top: 15%;
+  }
 }
