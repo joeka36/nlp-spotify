@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recording.component.css']
 })
 export class RecordingComponent implements OnInit {
+  isClicked:boolean = false;
 
   constructor() { }
 
