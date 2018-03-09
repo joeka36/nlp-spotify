@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpeechRecognitionService } from '../speech-recognition.service';
 
 @Component({
   selector: 'app-recording',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RecordingComponent implements OnInit {
   isClicked:boolean = false;
 
-  constructor() { }
+  constructor(speechRecognitionService:SpeechRecognitionService) { }
 
   ngOnInit() {
   }

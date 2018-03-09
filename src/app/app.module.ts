@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { RecordingComponent } from './recording/recording.component';
 import { HistoryComponent } from './history/history.component';
+import { SpeechRecognitionService } from './speech-recognition.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { HistoryComponent } from './history/history.component';
     BrowserModule,
     Angular2FontawesomeModule
   ],
-  providers: [],
+  providers: [SpeechRecognitionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
