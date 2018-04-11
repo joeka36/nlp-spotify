@@ -13,6 +13,7 @@
   margin: 20% auto;
   font-size: 7rem;
   color: #aaaaaa;
+  cursor: pointer;
 }
 
 .microphone-clicked {
