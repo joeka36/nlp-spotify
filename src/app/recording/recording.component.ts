@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SpeechRecognitionService } from '../speech-recognition.service';
+import { RecordingService } from './recording.service';
 
 @Component({
   selector: 'app-recording',
@@ -8,15 +9,21 @@ import { SpeechRecognitionService } from '../speech-recognition.service';
 })
 export class RecordingComponent implements OnInit {
   isClicked:boolean = false;
-  recordedSpeech:string = "Say something";
+  recordedSpeech:string = "Click the microphone to start recording. Once you're done, click it again and submit using the button to the right.";
 
-  constructor(private speechRecognitionService:SpeechRecognitionService) { }
+  constructor(private speechRecognitionService:SpeechRecognitionService,
+              private recordingService:RecordingService) { }
 
   ngOnInit() {
   }
 
   ngOnDestroy() {
     this.speechRecognitionService.DestroySpeechObject();
+  }
+
+  onSubmit() {
+    console.log("Submitted");
+    this.recordingService.submitCommand(this.recordedSpeech);
   }
 
   activateSpeech():void {
