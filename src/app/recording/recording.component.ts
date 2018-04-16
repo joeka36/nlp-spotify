@@ -23,6 +23,7 @@ export class RecordingComponent implements OnInit {
 
   onSubmit() {
     console.log("Submitted");
+    this.recordingService.addCommand(this.recordedSpeech);
     this.recordingService.submitCommand(this.recordedSpeech);
   }
 

@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from'rxjs/Observable';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 
 @Injectable()
 export class RecordingService {
@@ -12,7 +19,7 @@ export class RecordingService {
     return this.commandList;
   }
 
-  submitCommand(command:string) {
+  addCommand(command:string) {
     //Add command into commandList
     if(this.commandList.length == 5){
       this.commandList.pop();
@@ -21,10 +28,22 @@ export class RecordingService {
 
     else
       this.commandList.unshift(command)
+  }
 
+  submitCommand(command:string) {
+    console.log(command);
     //Send command to back-end
-    // return this.http.post("/api/new/command", command)
-      // .subscribe();
+    return this.http.post("/api/new/command", {
+      cmd: command
+    })
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log("Error occured");
+        }
+      );
   }
 
 }
