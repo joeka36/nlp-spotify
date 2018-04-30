@@ -1,7 +1,9 @@
 <div class="container rounded">
   <div class="row">
     <div class="col-md-2 recorder">
-      <i fa class="fas fa-microphone" (click)="activateSpeech()" (click)="isClicked = !isClicked" [ngClass]="{'microphone-clicked': isClicked}"></i>
+      <i fa class="fas fa-microphone" 
+      (click)="activateSpeech()" (click)="isClicked = !isClicked" 
+      [ngClass]="{'microphone-clicked': isClicked}"></i>
     </div>
     <div class="col-md-8 text-display">
       <p class="recorded-text">{{ recordedSpeech }}</p>
