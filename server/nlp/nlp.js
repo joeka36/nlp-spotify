@@ -46,6 +46,22 @@ nlpModule = {
       case "play":
         //resume playback on user device
         console.log("play detected");
+        console.log("Spotify Authorization: " + spotify.authorizationCode)
+        spotify
+          .authorizationCodeGrant(spotify.authorizationCode)
+          .then(function(data) {
+            console.log('Retrieved access token', data.body['access_token']);
+
+            // Set the access token
+            spotify.setAccessToken(data.body['access_token']);
+            return spotify.getMyDevices();
+          })
+          .then(function(data){
+            console.log(data.body)
+          })
+          .catch(function(err){
+            console.log("An error occurred: " + err)
+          });
       
       case "resume":
         //resume playback on user device
